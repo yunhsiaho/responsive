@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .content::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+  }
+  
+  html {
+    font-family: "Lucida Sans", sans-serif;
+  }
+  
+  .header{
+      color:white;
+      text-align: center;
+      font-size: larger;
+  }
+  .content{
+      color:white;
+  }
+  
+  
+  /* For mobile phones: */
+  @media only screen and (min-width: 0px) {
+    *{
+     background-color:rgb(252, 67, 97);
+     font-size:15px;
+     } 
+   [class*="col-"] {
+    width: 100%;}
+    #small{
+      opacity:100%;
+     }
+    #middle{
+      opacity:0%;
+     }
+    #big{
+      opacity:0%;
+     }
+    }
+  
+  @media only screen and (min-width: 300px) {
+    /* For tablets: */
+     *{
+     background-color:rgb(92, 153, 0);
+     font-size:25px;
+     } 
+    .col-1 {width: 66.6%;}
+    .col-2 {width: 33.3%;}
+    .col-3 {width: 100%;}
+  
+    #small{
+      opacity:0%;
+    }
+    #middle{
+      opacity:100%;
+    }
+    #big{
+      opacity:0%;
+    }
+    }
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    *{
+     background-color:rgb(77, 77, 243);
+     font-size:35px;
+     } 
+    .col-1 {width: 33.3%;}
+    .col-2 {width: 33.3%;}
+    .col-3 {width: 33.3%;}
+    
+      #small{
+      opacity:0%;
+    }
+    #middle{
+      opacity:0%;
+    }
+    #big{
+      opacity:100%;
+    }
+    }
